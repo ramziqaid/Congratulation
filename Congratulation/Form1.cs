@@ -157,8 +157,9 @@ namespace Congratulation
                             CreateImage(emp, imagePath);
 
                             // Update database with image path
-                            var updateEmployee = new Employee { Id = emp.Id, FullName = emp.FullName };
+                            var updateEmployee = new Employee { Id = emp.Id};
                             context.Attach(updateEmployee);
+                            updateEmployee.ShortPath = EncryptionHelper.Encrypt(emp.Id.ToString());
                             updateEmployee.ImagePath = imagePath;
                         }
 
