@@ -355,7 +355,7 @@ namespace Congratulation
 
         private void formate2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedFormate = chkListFontStyle.SelectedItem.ToString();
+            selectedFormate = formate2.SelectedItem.ToString();
         }
     }
 }
